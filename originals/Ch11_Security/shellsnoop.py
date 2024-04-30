@@ -154,7 +154,7 @@ def print_event(cpu, data, size):
         print("echo -e '%s\\c'" % printable)
         last_ts = event.ts
     else:
-        print("%s" % event.buf[0:event.count], end="")
+        print("%s" % event.buf[0:event.count].decode(), end="")
     sys.stdout.flush()
 
 # loop with callback to print_event
